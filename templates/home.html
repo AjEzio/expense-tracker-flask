@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+</head>
+<body>
+
+  <h2>Welcome to Expense Tracker</h2>
+
+
+  
+
+  <form action="{{ url_for('add') }}" method="GET">
+    <button type="submit">Add Expense</button>
+  </form>
+  <br>
+  <form action="{{ url_for('view') }}" method="GET">
+    <button type="submit">View Expense</button>
+  </form>
+  <br>
+  <form action="{{ url_for('total') }}" method="GET">
+    <button type="submit">Total Expense</button>
+  </form>
+
+</body>
+</html>

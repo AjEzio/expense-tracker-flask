@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    th, td {
+      padding: 12px 16px; 
+    }
+  </style>
+<head>
+    <meta charset="UTF-8" />
+    <title>View Expense</title>
+</head>
+<body>
+    <table>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Note</th>
+        </tr>
+        {% for ex in ex_entry %}
+        <tr>
+          <td>{{ ex.date }}</td>
+          <td>{{ ex.amount }}</td>
+          <td>{{ ex.category }}</td>
+          <td>{{ ex.note }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>
