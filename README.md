@@ -17,7 +17,7 @@ After you run the program, you’ll see a home page with buttons for:
 
 ## Where your data is saved
 
-Expenses are stored in a able expenses in app.db
+Expenses are stored in a table expenses in app.db
 
 
 The first time you add an expense, that database is created automatically with a header row (`date`, `amount`, `category`, `note`).
