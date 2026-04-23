@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for    
-import new_func
 import sqlite3
 
 app = Flask(__name__)       
@@ -59,7 +58,6 @@ def submit():
         if ex['date'] and ex['amount'] and ex['category'] and ex['note']:
             added = "Expense Added"
             add_dbentry(ex)
-          #  new_func.add_entry(ex)
 
         else:
             error = 'Add all fields'
@@ -69,7 +67,6 @@ def submit():
 
 @app.route('/view')
 def view():
-    #ex = new_func.view_entry()
     ex_db = view_dbentry()
     return render_template('view.html', ex_entry = ex_db)
 
@@ -77,7 +74,6 @@ def view():
 def total():
     total = 0
     total = total_db()
-   # total = new_func.total_expense()
     return render_template('total.html', total = total)
 
 
